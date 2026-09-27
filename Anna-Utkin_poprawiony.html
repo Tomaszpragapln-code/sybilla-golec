@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anna Utkin | Sybilla Golec</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =======================================================
+   PODSTAWY
+======================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F7F4EE;
+    color: #263F35;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =======================================================
+   HEADER
+======================================================= */
+
+.header {
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #263F35;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+}
+
+.back {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.back:hover {
+    color: #C9A24A;
+}
+
+
+/* =======================================================
+   GŁÓWNA SEKCJA
+======================================================= */
+
+.artist-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 30px 120px;
+}
+
+
+/* =======================================================
+   NAGŁÓWEK
+======================================================= */
+
+.artist-heading {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.artist-heading span {
+    color: #C9A24A;
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.artist-heading h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    font-weight: 500;
+    margin: 20px 0;
+    color: #263F35;
+}
+
+.artist-heading p {
+    font-size: 19px;
+    color: #555;
+}
+
+
+/* =======================================================
+   TEKST
+======================================================= */
+
+.artist-text {
+    background: white;
+    padding: 70px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.10);
+}
+
+.artist-text p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin: 0 0 30px;
+}
+
+
+/* =======================================================
+   CYTAT
+======================================================= */
+
+.artist-quote {
+    margin: 60px 0 20px;
+    padding: 45px 50px;
+    border-left: 5px solid #C9A24A;
+    background: #F7F4EE;
+}
+
+.artist-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    line-height: 1.4;
+    font-style: italic;
+    color: #263F35;
+    margin: 0;
+}
+
+
+/* =======================================================
+   STOPKA
+======================================================= */
+
+.artist-footer {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.artist-footer a {
+    color: #263F35;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.artist-footer a:hover {
+    color: #C9A24A;
+}
+
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 25px 6%;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .artist-page {
+        padding: 70px 20px 80px;
+    }
+
+    .artist-heading h1 {
+        font-size: 52px;
+    }
+
+    .artist-text {
+        padding: 35px 25px;
+    }
+
+    .artist-text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .artist-quote {
+        padding: 30px 25px;
+    }
+
+    .artist-quote p {
+        font-size: 27px;
+    }
+
+}
+
+</style>
+
+
+<style>
+.creator-footer{padding:32px 20px 42px;background:#F7F4EE;text-align:center;border-top:1px solid rgba(48,72,61,.10)}
+.creator-footer p{margin:0;font-size:13px;letter-spacing:1.4px;color:#77736a}
+.creator-link{position:relative;display:inline-block;margin-left:6px;color:var(--green);font-weight:600;text-decoration:none;overflow:hidden;transition:.3s}
+.creator-link::after{content:"";position:absolute;top:-30%;left:-65%;width:34%;height:160%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);transform:skewX(-20deg);animation:creatorShine 4.5s ease-in-out infinite}
+.creator-link:hover{color:var(--gold);text-shadow:0 0 12px rgba(199,164,88,.35)}
+@keyframes creatorShine{0%,68%{left:-65%}84%,100%{left:130%}}
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header class="header">
+
+    <a href="./index15.html" class="logo">
+        SYBILLA GOLEC
+    </a>
+
+    <a href="./index15.html" class="back">
+        ← Powrót do strony
+    </a>
+
+</header>
+
+
+<!-- =======================================================
+     TREŚĆ
+======================================================= -->
+
+<main class="artist-page">
+
+
+    <div class="artist-heading">
+
+        <span>GŁOS O ARTYSTCE</span>
+
+        <h1>Anna Utkin</h1>
+
+        <p>
+            O Sybilli Golec i jej twórczości
+        </p>
+
+    </div>
+
+
+    <article class="artist-text">
+
+
+        <p>
+            Sybilla Golec – Ślązaczka, anglistka, bywalczyni, barwna postać,
+            a przede wszystkim osobowość malarstwa naiwnego, wielokrotna
+            laureatka konkursów sztuki naiwnej w „Szybie Wilson” w Katowicach
+            oraz konkursów zagranicznych, absolwentka studiów podyplomowych
+            w Wałbrzychu z zakresu Artterapii u prof. Ireny Boreckiej
+            ze Szczawna Zdroju.
+        </p>
+
+
+        <p>
+            A zaczęło się od śmierci klinicznej, zatrucia tlenkiem węgla
+            z nieszczelnej instalacji. Doskonale prosperująca warszawska
+            businesswoman, właścicielka prywatnej szkoły, stanęła u wrót
+            wieczności, które stały się wrotami przemiany.
+        </p>
+
+
+        <p>
+            Jej życie w tym momencie zdominowało traumatyczne przeżycie,
+            które za poradą przyjaciela, znanego malarza Waldemara Raniszewskiego,
+            starała się oswoić poprzez malarstwo.
+        </p>
+
+
+        <p>
+            Przejmujący obraz pt. „Śmierć kliniczna” obrazuje ten rytuał
+            przejścia, początek drogi szamańskiej, która poprowadziła Sybillę
+            ku nowym wyzwaniom.
+        </p>
+
+
+        <p>
+            Uświadomienie sobie jak kruche jest życie i jak mało znaczą
+            tzw. „wartości materialne” zaprowadziło ją do stworzenia
+            „Sybilianizmu”, będącego formą filozofii tworzenia, opartą
+            na ideach śląskiego prymitywisty Teofila Ociepki oraz Henriego
+            Rousseau („Celnika”), francuskiego artysty – ikony tego kierunku,
+            własnych przemyśleniach i przeżyciach.
+        </p>
+
+
+        <p>
+            To filozofia pozytywna, radosna, niosąca umiłowanie prostych form
+            i koloru, przywracająca barwę dziecięcych doświadczeń i kształtów
+            tworzonych przez najmłodszych, radości prostego życia, zwykłych
+            przyjemności, umiłowania natury i wielobarwności świata, zaludniona
+            postaciami z dziecięcych bajek i opowieści ludowych.
+        </p>
+
+
+        <p>
+            Takie motywy jak anioły, motyle, ukwiecone okna, zwierzęta,
+            kwiaty, drzewa, wróżki, elfy, syreny, etc... to clou tego
+            malarstwa, które z założenia ma generować myśli i doświadczenia
+            pozytywne.
+        </p>
+
+
+        <p>
+            Na szczególną uwagę zasługuje motyw serca wracający w różnych
+            wariantach w całej twórczości artystki, jest jak czerwona flaga
+            nawołująca do opamiętania, do „patrzenia sercem”, do dopuszczenia
+            uczuć do świadomości i decyzji.
+        </p>
+
+
+        <p>
+            Wypadek i wywołany nim stan zdrowia i psychiki definitywnie odcięły
+            Sybillę od dawnego sposobu życia, jednocześnie otwierając zupełnie
+            nowy i nieoczekiwany jego rozdział.
+        </p>
+
+
+        <p>
+            Wszystko zaczęło się tutaj w Sokołowsku i w Szczawnie Zdroju gdzie
+            Malarka zamieszkała na 10 lat, aby powrócić do równowagi zdrowotnej.
+        </p>
+
+
+        <p>
+            Spokój, piękno natury Dolnego Śląska, otoczenie życzliwych ludzi,
+            rozwinęło dotychczas ukryte talenty, których istnienia nie
+            podejrzewała sama artystka, wprzęgnięta dotychczas w kierat
+            codziennych zajęć i obowiązków.
+        </p>
+
+
+        <p>
+            Poza motywami z mitologii ludowej, pojawiły się obrazy o tematyce
+            religijnej, wzorowane na ikonach postacie świętych, motywy świętej
+            rodziny i anioły we wszelkich kolorach i odmianach, będące osiowym
+            motywem tej twórczości.
+        </p>
+
+
+        <p>
+            Jednocześnie artystka zaczęła portretować swoich „Idoli”.
+            Takie postaci jak Frida Khalo, John Lennon, Henri Matisse,
+            Szekspir, święty Serafin, etc…
+        </p>
+
+
+        <p>
+            O czym marzy Sybilla Golec? O tym by sztuka naiwna „trafiła pod
+            strzechy”, by ludzie odreagowywali traumy i kłopoty poprzez
+            twórczość własną, by zamiast klikać w media społecznościowe
+            i narażać się na hejt i głupie komentarze, rozwijali własne
+            talenty i osobowości.
+        </p>
+
+
+        <p>
+            Marzy o powrocie do korzeni, do barwnej kultury ludowej, która
+            była inspiracją dla największych twórców jak Chopin, Moniuszko,
+            Wyspiański, Witkiewicz i inni.
+        </p>
+
+
+        <div class="artist-quote">
+
+            <p>
+                „Każdy jest artystą ale wielu sobie tego nie uświadamia
+                i trzeba dopiero krańcowych doświadczeń aby ta świadomość
+                się pojawiła”.
+            </p>
+
+        </div>
+
+
+    </article>
+
+
+    <div class="artist-footer">
+
+        <a href="index15.html">
+            ← Wróć do strony Sybilli Golec
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+<footer class="creator-footer">
+    <p>Strona internetowa: <a class="creator-link" href="https://www.linkedin.com/in/tomasz-bąbel-849b9824a/" target="_blank" rel="noopener noreferrer">Tomasz Bąbel</a></p>
+</footer>
+
+</body>
+
+</html>

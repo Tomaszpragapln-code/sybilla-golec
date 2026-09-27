@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sybilla Golec | Malarstwo Naiwne</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =======================================================
+   RESET
+======================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Montserrat',sans-serif;
+    background:#F7F4EE;
+    color:#2E2E2E;
+    overflow-x:hidden;
+
+}
+
+/* =======================================================
+   VARIABLES
+======================================================= */
+
+:root{
+
+--gold:#C7A458;
+--green:#30483D;
+--cream:#F7F4EE;
+--text:#2D2D2D;
+--white:#ffffff;
+
+}
+
+/* =======================================================
+   HEADER
+======================================================= */
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 60px;
+
+transition:.4s;
+
+z-index:999;
+
+}
+
+header.scrolled{
+
+background:rgba(34,34,34,.90);
+
+backdrop-filter:blur(10px);
+
+padding:18px 60px;
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:40px;
+
+letter-spacing:3px;
+
+color:white;
+
+}
+
+nav{
+
+display:flex;
+
+gap:35px;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--gold);
+
+}
+
+/* =======================================================
+   HERO
+======================================================= */
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(
+
+rgba(0,0,0,.45),
+
+rgba(0,0,0,.45)
+
+),
+
+url("img/hero.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:110%;
+
+height:110%;
+
+background:inherit;
+
+animation:zoom 25s linear infinite;
+
+z-index:0;
+
+}
+
+@keyframes zoom{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.15);
+
+}
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:10;
+
+max-width:900px;
+
+padding:30px;
+
+}
+
+.hero h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:82px;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+line-height:1.8;
+
+margin-bottom:45px;
+
+}
+
+.button{
+
+display:inline-block;
+
+padding:18px 45px;
+
+border:2px solid var(--gold);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+transition:.35s;
+
+}
+
+.button:hover{
+
+background:var(--gold);
+
+transform:translateY(-5px);
+
+}
+
+/* =======================================================
+   SCROLL ICON
+======================================================= */
+
+.scroll{
+
+position:absolute;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:15px;
+
+letter-spacing:2px;
+
+animation:bounce 2s infinite;
+
+z-index:20;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,12px);
+
+}
+
+}
+
+/* =======================================================
+   ABOUT
+======================================================= */
+
+.about{
+
+padding:120px 10%;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.about img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.about h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:58px;
+
+color:var(--green);
+
+margin-bottom:25px;
+
+}
+
+.about p{
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:20px;
+
+}
+
+blockquote{
+
+margin-top:40px;
+
+border-left:5px solid var(--gold);
+
+padding-left:25px;
+
+font-style:italic;
+
+font-size:22px;
+
+}
+/* =======================================================
+   FLAGSHIP
+======================================================= */
+
+.flagship{
+
+padding:120px 10%;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+background:white;
+
+}
+
+.flagship img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.18);
+
+transition:.5s;
+
+}
+
+.flagship img:hover{
+
+transform:scale(1.03);
+
+}
+
+.flagship-text .subtitle{
+
+color:var(--gold);
+
+letter-spacing:3px;
+
+font-size:14px;
+
+font-weight:bold;
+
+}
+
+.flagship-text h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:56px;
+
+margin:20px 0;
+
+color:var(--green);
+
+}
+
+.flagship-text p{
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-bottom:20px;
+
+}
+
+/* =======================================================
+   GALLERY
+======================================================= */
+
+.gallery{
+
+padding:120px 10%;
+
+background:#F7F4EE;
+
+}
+
+.gallery-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.gallery-title span{
+
+color:var(--gold);
+
+letter-spacing:4px;
+
+font-size:14px;
+
+}
+
+.gallery-title h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:60px;
+
+margin-top:20px;
+
+color:var(--green);
+
+}
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
+}
+
+.gallery-item{
+
+overflow:hidden;
+
+border-radius:18px;
+
+cursor:pointer;
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+transition:.4s;
+
+background:white;
+
+}
+
+.gallery-item:hover{
+
+transform:translateY(-10px);
+
+}
+
+.gallery-item img{
+
+width:100%;
+
+height:320px;
+
+object-fit:cover;
+
+transition:.6s;
+
+display:block;
+
+}
+
+.gallery-item:hover img{
+
+transform:scale(1.08);
+
+}
+/* =======================================================
+   LIGHTBOX
+======================================================= */
+
+.lightbox{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.92);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+.lightbox img{
+    cursor:default;
+
+
+max-width:90%;
+
+max-height:85%;
+
+border-radius:10px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+animation:zoom .3s ease;
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.close{
+
+position:absolute;
+
+top:30px;
+
+right:50px;
+
+font-size:60px;
+
+color:white;
+
+cursor:pointer;
+
+user-select:none;
+
+}
+/* =======================================================
+   CONTACT
+======================================================= */
+
+.contact {
+    padding: 120px 10%;
+    background: white;
+    text-align: center;
+}
+
+.contact-title span {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.contact-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    margin: 20px 0;
+    color: var(--green);
+}
+
+.contact-title p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-info a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.contact-info a:hover {
+    color: var(--gold);
+}
+
+
+/* =======================================================
+   LANGUAGE SWITCH
+======================================================= */
+
+/* Wyrównanie zdjęcia artystki do poziomu tytułu */
+.about > img{
+    align-self:start;
+    margin-top:52px;
+}
+
+
+.language-switch{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:18px;
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.lang-btn{
+    border:0;
+    background:transparent;
+    color:#777;
+    font-family:'Montserrat',sans-serif;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:2px;
+    cursor:pointer;
+    padding:4px 2px;
+    transition:.3s;
+}
+
+.lang-btn:hover,
+.lang-btn.active{
+    color:var(--gold);
+}
+
+.lang-content p{
+    margin-bottom:20px;
+}
+/* =======================================================
+   ARTYŚCI O SYBILLI
+======================================================= */
+
+.artists {
+    padding: 120px 10%;
+    background: #F7F4EE;
+}
+
+.artists-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.artists-title span {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.artists-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    margin: 20px 0;
+    color: var(--green);
+}
+
+.artists-title p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* KAFELKI */
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.artist-card {
+    display: block;
+    font: inherit;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: 20px;
+    padding: 55px 45px;
+    box-shadow: 0 20px 45px rgba(0,0,0,.10);
+    transition: .4s;
+    border: 1px solid rgba(0,0,0,.05);
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,.16);
+}
+
+.artist-card-inner {
+    text-align: center;
+}
+
+.artist-card-inner > span {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.artist-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    color: var(--green);
+    margin: 18px 0;
+}
+
+.artist-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.artist-link {
+    color: var(--green);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.artist-card:hover .artist-link {
+    color: var(--gold);
+}
+
+/* =======================================================
+   RYSZARD BIAŁY
+======================================================= */
+
+.ryszard-content {
+    display: none;
+    max-width: 1000px;
+    margin: 70px auto 0;
+    padding: 55px 65px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.10);
+}
+
+.ryszard-content .language-switch {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.ryszard-text p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+/* =======================================================
+   SMARTPHONE - FINAL RESPONSIVE
+======================================================= */
+
+@media (max-width: 600px){
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        overflow-x:hidden;
+    }
+
+    header{
+        padding:14px 16px;
+        min-height:auto;
+        background:rgba(34,34,34,.88);
+        backdrop-filter:blur(10px);
+    }
+
+    .logo{
+        font-size:27px;
+        letter-spacing:2px;
+        margin-bottom:8px;
+    }
+
+    nav{
+        width:100%;
+        gap:0;
+        justify-content:space-between;
+        margin-top:4px;
+    }
+
+    nav a{
+        font-size:11px;
+        letter-spacing:.3px;
+        padding:6px 3px;
+    }
+
+    .hero{
+        min-height:100svh;
+        height:auto;
+        padding:115px 18px 90px;
+        background-position:center;
+    }
+
+    .hero-content{
+        padding:20px 8px;
+        max-width:100%;
+    }
+
+    .hero h1{
+        font-size:43px;
+        line-height:1.08;
+        margin-bottom:20px;
+    }
+
+    .hero p{
+        font-size:17px;
+        line-height:1.55;
+        margin-bottom:32px;
+    }
+
+    .button{
+        padding:14px 28px;
+        font-size:14px;
+    }
+
+    .scroll{
+        bottom:22px;
+        font-size:10px;
+        letter-spacing:1px;
+        white-space:nowrap;
+    }
+
+    .about,
+    .flagship{
+        display:flex;
+        flex-direction:column;
+        gap:35px;
+        padding:70px 7%;
+        align-items:stretch;
+    }
+
+    .about > img{
+        order:0;
+        width:100%;
+        margin-top:0;
+        align-self:auto;
+    }
+
+    .about > div{
+        order:1;
+    }
+
+    .about h2,
+    .flagship-text h2{
+        font-size:42px;
+        line-height:1.12;
+    }
+
+    .about p,
+    .flagship-text p{
+        font-size:16px;
+        line-height:1.75;
+    }
+
+    .language-switch{
+        margin-bottom:14px;
+    }
+
+    .ryszard-content{
+        margin:45px auto 0;
+        padding:35px 25px;
+        border-radius:16px;
+    }
+
+    .ryszard-text p{
+        font-size:16px;
+        line-height:1.75;
+    }
+
+    .artists-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .artist-card{
+        padding:40px 25px;
+    }
+
+    .artist-card h3{
+        font-size:36px;
+    }
+
+    blockquote{
+        margin-top:30px;
+        padding-left:18px;
+        font-size:19px;
+    }
+
+    .flagship{
+        gap:35px;
+    }
+
+    .flagship img{
+        width:100%;
+    }
+
+    .flagship-text .subtitle{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+    .gallery{
+        padding:70px 7%;
+    }
+
+    .gallery-title{
+        margin-bottom:40px;
+    }
+
+    .gallery-title h2{
+        font-size:43px;
+        line-height:1.1;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .gallery-item{
+        border-radius:14px;
+    }
+
+    .gallery-item img{
+        height:auto;
+        max-height:none;
+        aspect-ratio:4/3;
+        object-fit:cover;
+    }
+
+    .gallery-item:hover{
+        transform:none;
+    }
+
+    .gallery-item:hover img{
+        transform:none;
+    }
+
+    .contact{
+        padding:70px 7%;
+    }
+
+    .contact-title h2{
+        font-size:43px;
+        line-height:1.1;
+    }
+
+    .contact-title p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .contact-info a{
+        font-size:15px;
+        word-break:break-word;
+    }
+
+    .lightbox{
+        padding:20px;
+    }
+
+    .lightbox img{
+    cursor:default;
+
+        max-width:96%;
+        max-height:78%;
+        border-radius:6px;
+    }
+
+    .close{
+        top:12px;
+        right:20px;
+        font-size:46px;
+    }
+}
+
+/* Bardzo małe telefony */
+@media (max-width: 380px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    nav a{
+        font-size:10px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .about h2,
+    .flagship-text h2,
+    .gallery-title h2,
+    .contact-title h2{
+        font-size:37px;
+    }
+}
+
+
+@media(max-width:900px){
+
+header{
+
+padding:20px;
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+/* =======================================================
+   GALLERY CAPTIONS
+======================================================= */
+
+.gallery-caption{
+    padding:18px 20px 22px;
+    text-align:center;
+    background:white;
+}
+
+.gallery-caption h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:var(--green);
+    font-weight:600;
+    margin:0;
+}
+
+/* =======================================================
+   CREATOR / LINKEDIN
+======================================================= */
+
+.creator-footer{
+    padding:32px 20px 42px;
+    background:#F7F4EE;
+    text-align:center;
+    border-top:1px solid rgba(48,72,61,.10);
+}
+
+.creator-footer p{
+    margin:0;
+    font-size:13px;
+    letter-spacing:1.4px;
+    color:#77736a;
+}
+
+.creator-link{
+    position:relative;
+    display:inline-block;
+    vertical-align:-3px;
+    margin-left:6px;
+    color:var(--green);
+    font-weight:600;
+    text-decoration:none;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.creator-link::after{
+    content:"";
+    position:absolute;
+    top:-30%;
+    left:-65%;
+    width:34%;
+    height:160%;
+
+    background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.95),
+    transparent
+);
+
+    transform:skewX(-20deg);
+
+    animation:creatorShine 4.5s ease-in-out infinite;
+}
+
+.creator-link:hover{
+    color:var(--gold);
+    text-shadow:0 0 12px rgba(199,164,88,.35);
+}
+
+@keyframes creatorShine{
+    0%,68%{left:-65%;}
+    84%,100%{left:130%;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header id="header">
+
+<div class="logo">
+
+SYBILLA GOLEC
+
+</div>
+
+<nav>
+
+<a href="#">Start</a>
+
+<a href="#about">O artystce</a>
+
+<a href="#gallery">Galeria</a>
+
+<a href="#contact">Kontakt</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Zapraszam do mojego świata</h1>
+
+<p>
+
+Malarstwo naiwne pełne światła,<br>
+
+kolorów i emocji.
+
+</p>
+
+<a class="button" href="#about">
+
+Poznaj galerię
+
+</a>
+
+</div>
+
+<div class="scroll">
+
+▼ ODKRYJ HISTORIĘ ▼
+
+</div>
+
+</section>
+<!-- =======================================================
+     ARTYŚCI O SYBILLI
+======================================================= -->
+
+<section class="artists" id="artists">
+
+    <div class="artists-title">
+
+        <span>GŁOSY O ARTYSTCE</span>
+
+        <h2>Artyści o Sybilli</h2>
+
+        <p>
+            Poznaj spojrzenie osób związanych ze światem sztuki.
+        </p>
+
+    </div>
+
+    <div class="artists-grid">
+
+        <!-- ANNA UTKIN -->
+
+        <a href="Anna-Utkin_poprawiony.html" class="artist-card">
+
+            <div class="artist-card-inner">
+
+                <span>ARTYSTKA</span>
+
+                <h3>Anna Utkin</h3>
+
+                <p>
+                    O Sybilli Golec i jej twórczości
+                </p>
+
+                <div class="artist-link">
+                    Czytaj →
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- RYSZARD BIAŁY -->
+
+<button class="artist-card ryszard-button" type="button">
+
+    <div class="artist-card-inner">
+
+        <span>ARTYSTA</span>
+
+        <h3>Ryszard Biały</h3>
+
+        <p>
+            O Sybilli Golec i jej twórczości
+        </p>
+
+        <div class="artist-link">
+            Czytaj →
+        </div>
+
+    </div>
+
+</button>
+        </div>
+<!-- =======================================================
+     RYSZARD BIAŁY
+======================================================= -->
+
+<div class="ryszard-content" id="ryszardContent">
+
+    <div class="language-switch"
+         aria-label="Wybór języka">
+
+        <button
+            type="button"
+            class="lang-btn active"
+            data-lang="pl">
+            PL
+        </button>
+
+        <span>/</span>
+
+        <button
+            type="button"
+            class="lang-btn"
+            data-lang="en">
+            ENG
+        </button>
+
+    </div>
+
+
+    <!-- POLSKI -->
+
+    <div class="ryszard-text lang-content lang-pl">
+
+        <p>
+            Sybilla zaczęła malować w wieku 50 lat, zainspirowana filmem
+            „Frieda”, opowiadającym o naiwnej malarce, która po wypadku
+            samochodowym zwróciła się ku malarstwu. Podobnie jak ona,
+            Sybilla również przeżyła śmierć kliniczną spowodowaną
+            zatruciem tlenkiem i poprzez arteterapię sama powróciła
+            do zdrowia.
+        </p>
+
+        <p>
+            W 2002 roku zapisała się na warsztaty malarskie i jeszcze
+            przed ukończeniem 50. roku życia namalowała swój pierwszy
+            obraz olejny. Jej przyjaciel Waldemar Raniszewski,
+            początkowo niedowierzający, a następnie zachwycony jej
+            talentem, powiedział: „będziesz wielką malarką naiwną”
+            i skierował ją na warsztaty malowania ikon w Sokołowsku.
+            Tam poznała Michała Boguckiego, a następnie Michała
+            Ogińskiego – współautora jej manifestu „Sybillanizm”:
+
+            <br><br>
+
+            „Sztuka powinna być optymistyczna i podnosząca na duchu”.
+
+            <br><br>
+
+            Michał Ogiński malował również anioły, które Sybilla
+            tak bardzo kocha.
+        </p>
+
+        <p>
+            Po powrocie do Warszawy w 2009 roku dołączyła do grupy
+            artystycznej prowadzonej przez Kingę Pawelską. W 2015 roku
+            została wybrana do udziału w Naive Art Festival w Katowicach,
+            w którym prezentowali się artyści z 52 krajów. W tym samym
+            roku otrzymała specjalną nagrodę za cykl
+            „Koty w czasach epidemii”.
+        </p>
+
+    </div>
+
+
+    <!-- ENGLISH -->
+
+    <div class="ryszard-text lang-content lang-en"
+         style="display:none;">
+
+        <p>
+            Sybilla started painting at the age of 50, inspired by the
+            film “Frieda”, about a naive painter who turned to painting
+            after a traffic accident. Like her, Sybilla also suffered
+            clinical death caused by oxide poisoning and healed herself
+            through art therapy.
+        </p>
+
+        <p>
+            Enrolling in a painting workshop in 2002, she finished her
+            first oil painting before her 50th birthday. Her initially
+            incredulous and then amazed friend Waldemar Raniszewski
+            prophesied, “you will be a great naive painter”, and sent
+            her to an icon painting workshop in Sokołowsko, where she
+            met and learned from Michał Bogucki and then Michał Ogiński,
+            the co-signer of her “Sybillanism” manifesto:
+
+            <br><br>
+
+            “Art should be optimistic and uplifting”.
+
+            <br><br>
+
+            Michał Ogiński also painted the angels she loves so dearly.
+        </p>
+
+        <p>
+            Returning to Warsaw in 2009, she joined an artistic group
+            headed by Kinga Pawelska and in 2015 was chosen to participate
+            in the Naive Art Festival in Katowice, featuring artists from
+            52 countries. That same year she won a special award for her
+            series “Cats in the time of an epidemic”.
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+
+    <img src="img/sybilla.jpg" alt="Sybilla Golec">
+
+    <div>
+
+        <blockquote>
+            „Każdy obraz jest zaproszeniem do mojego świata.”
+        </blockquote>
+
+    </div>
+
+</section>
+<!-- =======================================================
+     FLAGSHIP PAINTING
+======================================================= -->
+
+<section class="flagship">
+
+    <div class="flagship-image">
+
+        <img src="img/hero.jpg" alt="Obraz flagowy">
+
+    </div>
+
+    <div class="flagship-text">
+
+        <span class="subtitle">OBRAZ FLAGOWY</span>
+
+        <h2>Świat pełen kolorów i wyobraźni</h2>
+
+        <p>
+
+            Jeden z najbardziej charakterystycznych obrazów Sybilli Golec.
+            Pogodne barwy, ryby, słońce i natura tworzą niezwykły świat,
+            w którym każdy detal opowiada własną historię.
+
+        </p>
+
+        <p>
+
+        
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =======================================================
+     GALLERY
+======================================================= -->
+
+<section class="gallery" id="gallery">
+
+    <div class="gallery-title">
+
+        <span>GALERIA</span>
+
+        <h2>Wybrane obrazy</h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="img/gallery 1.jpg" alt="Drzewo Szczęścia">
+            <div class="gallery-caption">
+                <h3>Drzewo Szczęścia</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 2.jpg" alt="W stylu Russo art native">
+            <div class="gallery-caption">
+                <h3>W stylu Russo art native</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 3.jpg" alt="Dwa koty nad jeziorem">
+            <div class="gallery-caption">
+                <h3>Dwa koty nad jeziorem</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 4.jpg" alt="Czarny Król z aniołkami">
+            <div class="gallery-caption">
+                <h3>Czarny Król z aniołkami</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 5.jpg" alt="Anioł i dwa serca">
+            <div class="gallery-caption">
+                <h3>Anioł i dwa serca</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 6.jpg" alt="Koty ze słonecznikiem">
+            <div class="gallery-caption">
+                <h3>Koty ze słonecznikiem</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 7.jpg" alt="Kwiaty z kotkiem w stylu Matisse.">
+            <div class="gallery-caption">
+                <h3>Kwiaty z kotkiem w stylu Matisse.</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 8.jpg" alt="Galeria na Sienickiej.">
+            <div class="gallery-caption">
+                <h3>Galeria na Sienickiej.</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/gallery 9.jpg" alt="Moja pierwsza ikona w stylu Nowosielskiego.">
+            <div class="gallery-caption">
+                <h3>Moja pierwsza ikona w stylu Nowosielskiego.</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     CONTACT
+======================================================= -->
+
+<section class="contact" id="contact">
+
+
+    <div class="contact-title">
+
+        <span>KONTAKT</span>
+
+        <h2>Zapraszam do kontaktu</h2>
+
+        <p>
+            W sprawie obrazów, wystaw oraz współpracy
+            zapraszam do kontaktu.
+        </p>
+
+    </div>
+
+    <div class="contact-info">
+
+        <a href="mailto:sybilla0214@gmail.com">
+            ✉ EMAIL
+        </a>
+
+        <a href="tel:696565987">
+            ☎ TELEFON 696 565 987
+        </a>
+        
+         <a href="https://www.facebook.com/people/Sybilla-Golec/pfbid02NmL2dx3aZtoet5rKmvdebRUyuQ2QZXWkZziEudzUtskaAqU8L1UYC5QBCDciue2pl/"
+   target="_blank"
+   rel="noopener noreferrer">
+    f Facebook
+</a>
+
+    </div>
+
+</section>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+    <button type="button" class="close" id="lightbox-close" aria-label="Zamknij">&times;</button>
+    <img id="lightbox-img" alt="Powiększony obraz">
+</div>
+
+<script>
+
+// HEADER
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 80);
+});
+
+// JĘZYK PL / ENG
+document.querySelectorAll(".language-switch").forEach(switcher => {
+    const buttons = switcher.querySelectorAll(".lang-btn");
+    const container = switcher.parentElement;
+    const contents = container.querySelectorAll(":scope > .lang-content");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const language = button.dataset.lang;
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+            contents.forEach(content => {
+                content.style.display = content.classList.contains("lang-" + language) ? "block" : "none";
+            });
+        });
+    });
+});
+
+// RYSZARD BIAŁY
+const ryszardButton = document.querySelector(".ryszard-button");
+const ryszardContent = document.getElementById("ryszardContent");
+if (ryszardButton && ryszardContent) {
+    ryszardButton.addEventListener("click", () => {
+        const isOpen = ryszardContent.style.display === "block";
+        ryszardContent.style.display = isOpen ? "none" : "block";
+        if (!isOpen) {
+            ryszardContent.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
+}
+
+// LIGHTBOX
+const galleryImages = document.querySelectorAll(".gallery-item img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxClose = document.getElementById("lightbox-close");
+
+galleryImages.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightbox.setAttribute("aria-hidden", "false");
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt || "Powiększony obraz";
+    });
+});
+
+function closeLightbox() {
+    lightbox.style.display = "none";
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") closeLightbox();
+});
+
+
+
+</script>
+
+
+
+<!-- =======================================================
+     CREATOR
+======================================================= -->
+
+<footer class="creator-footer">
+    <p>
+        Strona internetowa:
+        <a class="creator-link"
+           href="https://www.linkedin.com/in/tomasz-bąbel-849b9824a/"
+           target="_blank"
+           rel="noopener noreferrer">Tomasz Bąbel</a>
+    </p>
+</footer>
+
+</body>
+</html>
